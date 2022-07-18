@@ -2,7 +2,7 @@ var menu1 = `
     SELECT A OPTION:
     (1) Table generator
     (2) Bhaskara
-    (3) Square root
+    (3) roots
     (4) Geometric forms
 `;
 
@@ -18,7 +18,6 @@ case `1`:
     (3) Product
     (4) Quotient
     `;
-
     var option2 = prompt (menu2);
     var num1 = Number(prompt(`Type a number.`));
     var num2 = 0;
@@ -88,9 +87,29 @@ case `2`:
 break;
 
 case `3`:
-    var num1 = prompt (`Type a number.`);
-    console.log (`The square root of ${num1} is ${Math.sqrt(num1.toFixed(2))}.`);
-    break;
+    var menu2 =`
+    Coose a root:
+    (1) Square root
+    (2) Cubic root
+    `
+    var option2 = prompt (menu2)
+
+    switch(option2){
+        case `1`:
+        var num1 = prompt (`Type a number:`);
+        console.log (`The square root of ${num1} is ${Math.sqrt(num1).toFixed(2)}.`);
+        break;
+
+        case `2`:
+        var num1 = prompt (`Type a number:`)
+        console.log (`The cubic root of ${num1} is ${Math.cbrt(num1).toFixed(2)}.`)
+        break;
+
+    default:
+        console.log (`Invalid option.`)
+    
+    }
+break;
 
 case `4`:
     var menu2 = `
@@ -99,7 +118,6 @@ case `4`:
     (2) Triangle
     (3) Square
     `
-
     var option2 = prompt (menu2)
 
     switch (option2){
@@ -108,19 +126,20 @@ case `4`:
             var radius = Number(prompt (`Type the radius of the circle.`));
             var area = Math.PI * (radius * radius);
             var perimeter = 2 * Math.PI * radius;
-            console.log (`The area of the circle is ${area.toFixed(2)} and perimeter is ${perimeter.toFixed(2)}.`);
+            console.log (`The area of the circle is ${area.toFixed(2)} and perimeter is ${(perimeter.toFixed(2))}.`);
             break;
 
         case `2`:
-            var base = Number(prompt (`Type the base of the triangle.`))
-            var altura = Number(prompt (`Type the height of the triangle.`))
+            var base = Number(prompt (`Type the base of the triangle.`));
+            var altura = Number(prompt (`Type the height of the triangle.`));
             var area = (base * altura) / 2
-            console.log (`The triangle area is ${area.toFixed(2)}.`)
+            console.log (`The triangle area is ${(area.toFixed(2))}.`);
+            break;
 
         case `3`:
-            var side = Number(prompt (`Type one square side.`))
-            var area = side * side
-            console.log (`The square area is ${area.toFixed(2)}.`)
+            var side = Number(prompt (`Type one square side.`));
+            var area = side * side;
+            console.log (`The square area is ${(area).toFixed(2)}.`);
             break;
 
 
