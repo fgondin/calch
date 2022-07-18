@@ -73,12 +73,12 @@ case `2`:
         x1 = (-b + Math.sqrt (delta)) / 2 * a;
         x2 = (-b - Math.sqrt (delta)) / 2 * a;
         console.log (`
-        The calculation of x1 is ${Math.fround(x1)};
-        The calculation of x2 is ${Math.fround(x2)}`);
+        The calculation of x1 is ${x1.toFixed(2)};
+        The calculation of x2 is ${x2.toFixed(2)}`);
         } else {
             if (delta === 0){
                 x1 = -b/2*a;
-                console.log (`The calculation of x1 is ${Math.fround(x1)}`);
+                console.log (`The calculation of x1 is ${x1.toFixed(2)}`);
             }else{
                 if (delta < 0){
                     console.log (`The equation has no real results.`);
@@ -89,7 +89,7 @@ break;
 
 case `3`:
     var num1 = prompt (`Type a number.`);
-    console.log (`The square root of ${num1} is ${Math.sqrt(num1)}.`);
+    console.log (`The square root of ${num1} is ${Math.sqrt(num1.toFixed(2))}.`);
     break;
 
 case `4`:
@@ -108,19 +108,19 @@ case `4`:
             var radius = Number(prompt (`Type the radius of the circle.`));
             var area = Math.PI * (radius * radius);
             var perimeter = 2 * Math.PI * radius;
-            console.log (`The area of the circle is ${Math.fround(area)} and perimeter is ${Math.fround(perimeter)}.`);
+            console.log (`The area of the circle is ${area.toFixed(2)} and perimeter is ${perimeter.toFixed(2)}.`);
             break;
 
         case `2`:
             var base = Number(prompt (`Type the base of the triangle.`))
             var altura = Number(prompt (`Type the height of the triangle.`))
             var area = (base * altura) / 2
-            console.log (`The triangle area is ${Math.fround(area)}.`)
+            console.log (`The triangle area is ${area.toFixed(2)}.`)
 
         case `3`:
             var side = Number(prompt (`Type one square side.`))
             var area = side * side
-            console.log (`The square area is ${Math.fround(area)}.`)
+            console.log (`The square area is ${area.toFixed(2)}.`)
             break;
 
 
